@@ -1,4 +1,3 @@
-import req from 'express/lib/request';
 import { openDB } from 'idb';
 
 const initdb = async () =>
@@ -32,7 +31,7 @@ export const getDb = async () => {
   const request = store.getAll()
   const result = await request;
   if (result){
-    return result.values
+    return result.value
   }
   else {
     console.error("Error")
