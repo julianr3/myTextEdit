@@ -19,6 +19,8 @@ module.exports = () => {
     },
     plugins: [
       new WebpackPwaManifest({
+        inject: true,
+        fingerprints: false,
         name: 'myTextEdit',
         short_name: 'myTextEdit',
         description: 'Cool text editor',
